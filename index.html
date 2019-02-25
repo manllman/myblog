@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/myblog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/myblog/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -110,8 +117,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索文章","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -160,7 +167,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">快乐学习呀</p>
+        <h1 class="site-subtitle" itemprop="description">快乐学习呀</h1>
       
   </div>
 
@@ -221,47 +228,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -307,9 +276,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/myblog/2019/02/25/python要点总结-函数式编程/" itemprop="url">python要点总结[函数式编程]</a></h1>
+                <a class="post-title-link" href="/myblog/2019/02/25/python要点总结-函数式编程/" itemprop="url">python要点总结[函数式编程]</a></h2>
         
 
         <div class="post-meta">
@@ -337,7 +306,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T16:11:57+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T16:26:12+08:00">
                 2019-02-25
               </time>
             
@@ -377,37 +346,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
 
           
 
@@ -425,7 +363,7 @@
 
       
         
-          <h1 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h1>
+          <h2 id="1-高阶函数"><a href="#1-高阶函数" class="headerlink" title="1.高阶函数"></a>1.高阶函数</h2><h3 id="1-map"><a href="#1-map" class="headerlink" title="1.map()"></a>1.map()</h3><h3 id="2-reduce-是干啥的"><a href="#2-reduce-是干啥的" class="headerlink" title="2.reduce()是干啥的"></a>2.reduce()是干啥的</h3><h3 id="3-filter-函数是干啥的"><a href="#3-filter-函数是干啥的" class="headerlink" title="3.filter()函数是干啥的"></a>3.filter()函数是干啥的</h3>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/myblog/2019/02/25/python要点总结-函数式编程/#more" rel="contents">
@@ -496,9 +434,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/myblog/2019/02/25/python要点总结/" itemprop="url">python要点总结[函数-高级特性]</a></h1>
+                <a class="post-title-link" href="/myblog/2019/02/25/python要点总结/" itemprop="url">python要点总结[函数-高级特性]</a></h2>
         
 
         <div class="post-meta">
@@ -526,7 +464,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T10:55:24+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T16:27:26+08:00">
                 2019-02-25
               </time>
             
@@ -566,37 +504,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
 
           
 
@@ -614,9 +521,12 @@
 
       
         
-          <p>2019/2/25</p>
-<h1 id="python学习过程中的要点总结-函数-高级特性"><a href="#python学习过程中的要点总结-函数-高级特性" class="headerlink" title="python学习过程中的要点总结-[函数-高级特性]"></a>python学习过程中的要点总结-[函数-高级特性]</h1><h2 id="1-函数的参数"><a href="#1-函数的参数" class="headerlink" title="1.函数的参数"></a>1.函数的参数</h2><blockquote>
-<p>1.使用 *args 和 **kw 给函数传递可变参数<br>
+          <h2 id="1-函数的参数"><a href="#1-函数的参数" class="headerlink" title="1.函数的参数"></a>1.函数的参数</h2><blockquote>
+<p>1.使用 *args 和 **kw 给函数传递可变参</p>
+</blockquote>
+<pre><code>def calc(*numbers):
+    sum = 0
+</code></pre>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/myblog/2019/02/25/python要点总结/#more" rel="contents">
@@ -626,7 +536,7 @@
           <!--/noindex-->
         
       
-    </p></blockquote></div>
+    </div>
     
     
     
@@ -687,9 +597,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/myblog/2019/01/23/TechExpo/" itemprop="url">TechExpo</a></h1>
+                <a class="post-title-link" href="/myblog/2019/01/23/TechExpo/" itemprop="url">TechExpo</a></h2>
         
 
         <div class="post-meta">
@@ -756,37 +666,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
           
 
           
@@ -879,9 +758,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/myblog/2019/01/16/阅读/" itemprop="url">Why some humans are born to have beer belly</a></h1>
+                <a class="post-title-link" href="/myblog/2019/01/16/阅读/" itemprop="url">Why some humans are born to have beer belly</a></h2>
         
 
         <div class="post-meta">
@@ -948,37 +827,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
           
 
           
@@ -1071,9 +919,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/myblog/2019/01/15/趁热打铁，再来一篇/" itemprop="url">趁热打铁，再来一篇</a></h1>
+                <a class="post-title-link" href="/myblog/2019/01/15/趁热打铁，再来一篇/" itemprop="url">趁热打铁，再来一篇</a></h2>
         
 
         <div class="post-meta">
@@ -1140,37 +988,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
           
 
           
@@ -1256,9 +1073,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/myblog/2019/01/15/My-First-Post/" itemprop="url">My First Post</a></h1>
+                <a class="post-title-link" href="/myblog/2019/01/15/My-First-Post/" itemprop="url">My First Post</a></h2>
         
 
         <div class="post-meta">
@@ -1325,37 +1142,6 @@
 
           
 
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
           
 
           
@@ -1449,7 +1235,7 @@
               <img class="site-author-image" itemprop="image" src="/myblog/images/frog.jpg" alt="Sqing">
             
               <p class="site-author-name" itemprop="name">Sqing</p>
-              <p class="site-description motion-element" itemprop="description">Hold on Hold on</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -1501,7 +1287,7 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:763693955@gmail.com" target="_blank" title="E-Mail">
+                    <a href="mailto:763693955@qq.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
@@ -1540,15 +1326,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Sqing</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count"></span>
   
 </div>
 
@@ -1714,19 +1491,6 @@
   
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/myblog/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/myblog/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/myblog/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 

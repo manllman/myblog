@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/myblog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/myblog/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -110,8 +117,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索文章","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -159,7 +166,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">快乐学习呀</p>
+        <h1 class="site-subtitle" itemprop="description">快乐学习呀</h1>
       
   </div>
 
@@ -220,47 +227,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -282,8 +251,8 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>python<small>标签</small>
-        </h1>
+        <h2>python<small>标签</small>
+        </h2>
       </div>
 
       
@@ -292,7 +261,7 @@
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
             <a class="post-title-link" href="/myblog/2019/02/25/python要点总结-函数式编程/" itemprop="url">
               
@@ -300,7 +269,7 @@
               
             </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated" datetime="2019-02-25T11:03:04+08:00" content="2019-02-25">
@@ -318,7 +287,7 @@
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
             <a class="post-title-link" href="/myblog/2019/02/25/python要点总结/" itemprop="url">
               
@@ -326,7 +295,7 @@
               
             </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated" datetime="2019-02-25T08:14:40+08:00" content="2019-02-25">
@@ -382,7 +351,7 @@
               <img class="site-author-image" itemprop="image" src="/myblog/images/frog.jpg" alt="Sqing">
             
               <p class="site-author-name" itemprop="name">Sqing</p>
-              <p class="site-description motion-element" itemprop="description">Hold on Hold on</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -434,7 +403,7 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:763693955@gmail.com" target="_blank" title="E-Mail">
+                    <a href="mailto:763693955@qq.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
@@ -473,15 +442,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Sqing</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count"></span>
   
 </div>
 
@@ -647,19 +607,6 @@
   
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/myblog/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/myblog/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/myblog/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 

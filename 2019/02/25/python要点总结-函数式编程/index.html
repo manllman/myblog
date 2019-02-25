@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/myblog/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/myblog/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -79,18 +86,18 @@
 
 
 
-<meta name="description" content="函数式编程">
+<meta name="description" content="1.高阶函数1.map()2.reduce()是干啥的3.filter()函数是干啥的">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python要点总结[函数式编程]">
 <meta property="og:url" content="https://manllman.github.io/myblog/2019/02/25/python要点总结-函数式编程/index.html">
 <meta property="og:site_name" content="青仔">
-<meta property="og:description" content="函数式编程">
+<meta property="og:description" content="1.高阶函数1.map()2.reduce()是干啥的3.filter()函数是干啥的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-25T08:11:57.271Z">
+<meta property="og:updated_time" content="2019-02-25T08:26:12.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python要点总结[函数式编程]">
-<meta name="twitter:description" content="函数式编程">
+<meta name="twitter:description" content="1.高阶函数1.map()2.reduce()是干啥的3.filter()函数是干啥的">
 
 
 
@@ -112,8 +119,8 @@
       applicationID: '',
       apiKey: '',
       indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索文章","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+      hits: "",
+      labels: ""
     }
   };
 </script>
@@ -161,7 +168,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">快乐学习呀</p>
+        <h1 class="site-subtitle" itemprop="description">快乐学习呀</h1>
       
   </div>
 
@@ -222,47 +229,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -308,7 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python要点总结[函数式编程]</h1>
+          <h2 class="post-title" itemprop="name headline">python要点总结[函数式编程]</h2>
         
 
         <div class="post-meta">
@@ -336,7 +305,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T16:11:57+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T16:26:12+08:00">
                 2019-02-25
               </time>
             
@@ -376,37 +345,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  
-                </span>
-              
-            </div>
-          
 
           
 
@@ -423,8 +361,8 @@
       
 
       
-        <h1 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h1><a id="more"></a>
-<h2 id="1-高阶函数"><a href="#1-高阶函数" class="headerlink" title="1.高阶函数"></a>1.高阶函数</h2><h3 id="1-map"><a href="#1-map" class="headerlink" title="1.map()"></a>1.map()</h3><h3 id="2-reduce-是干啥的"><a href="#2-reduce-是干啥的" class="headerlink" title="2.reduce()是干啥的"></a>2.reduce()是干啥的</h3><h3 id="3-filter-函数是干啥的"><a href="#3-filter-函数是干啥的" class="headerlink" title="3.filter()函数是干啥的"></a>3.filter()函数是干啥的</h3><h3 id="4-sorted-，如何自定义排序规则"><a href="#4-sorted-，如何自定义排序规则" class="headerlink" title="4.sorted()，如何自定义排序规则"></a>4.sorted()，如何自定义排序规则</h3><blockquote>
+        <h2 id="1-高阶函数"><a href="#1-高阶函数" class="headerlink" title="1.高阶函数"></a>1.高阶函数</h2><h3 id="1-map"><a href="#1-map" class="headerlink" title="1.map()"></a>1.map()</h3><h3 id="2-reduce-是干啥的"><a href="#2-reduce-是干啥的" class="headerlink" title="2.reduce()是干啥的"></a>2.reduce()是干啥的</h3><h3 id="3-filter-函数是干啥的"><a href="#3-filter-函数是干啥的" class="headerlink" title="3.filter()函数是干啥的"></a>3.filter()函数是干啥的</h3><a id="more"></a>
+<h3 id="4-sorted-，如何自定义排序规则"><a href="#4-sorted-，如何自定义排序规则" class="headerlink" title="4.sorted()，如何自定义排序规则"></a>4.sorted()，如何自定义排序规则</h3><blockquote>
 <p>key = ?<br>1.依次取出来数据，自己定义的规则只需要把提取出来的数据返回给key就行了</p>
 </blockquote>
 <pre><code>L = [(&apos;Bob&apos;, 75), (&apos;Adam&apos;, 92), (&apos;Bart&apos;, 66), (&apos;Lisa&apos;, 88)]
@@ -570,7 +508,7 @@ def int2(x, base=2):
               <img class="site-author-image" itemprop="image" src="/myblog/images/frog.jpg" alt="Sqing">
             
               <p class="site-author-name" itemprop="name">Sqing</p>
-              <p class="site-description motion-element" itemprop="description">Hold on Hold on</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -622,7 +560,7 @@ def int2(x, base=2):
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="mailto:763693955@gmail.com" target="_blank" title="E-Mail">
+                    <a href="mailto:763693955@qq.com" target="_blank" title="E-Mail">
                       
                         <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   </span>
@@ -651,7 +589,7 @@ def int2(x, base=2):
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数式编程"><span class="nav-number">1.</span> <span class="nav-text">函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-高阶函数"><span class="nav-number">1.1.</span> <span class="nav-text">1.高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-map"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-reduce-是干啥的"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.reduce()是干啥的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-filter-函数是干啥的"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.filter()函数是干啥的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-sorted-，如何自定义排序规则"><span class="nav-number">1.1.4.</span> <span class="nav-text">4.sorted()，如何自定义排序规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-返回函数"><span class="nav-number">1.2.</span> <span class="nav-text">2.返回函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用返回函数实现闭包–不返回值，而是返回一个函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">利用返回函数实现闭包–不返回值，而是返回一个函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-匿名函数–使用lambda定义函数"><span class="nav-number">1.3.</span> <span class="nav-text">3.匿名函数–使用lambda定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-装饰器"><span class="nav-number">1.4.</span> <span class="nav-text">4.装饰器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-偏函数"><span class="nav-number">1.5.</span> <span class="nav-text">5.偏函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-高阶函数"><span class="nav-number">1.</span> <span class="nav-text">1.高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-map"><span class="nav-number">1.1.</span> <span class="nav-text">1.map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-reduce-是干啥的"><span class="nav-number">1.2.</span> <span class="nav-text">2.reduce()是干啥的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-filter-函数是干啥的"><span class="nav-number">1.3.</span> <span class="nav-text">3.filter()函数是干啥的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-sorted-，如何自定义排序规则"><span class="nav-number">1.4.</span> <span class="nav-text">4.sorted()，如何自定义排序规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-返回函数"><span class="nav-number">2.</span> <span class="nav-text">2.返回函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用返回函数实现闭包–不返回值，而是返回一个函数"><span class="nav-number">2.1.</span> <span class="nav-text">利用返回函数实现闭包–不返回值，而是返回一个函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-匿名函数–使用lambda定义函数"><span class="nav-number">3.</span> <span class="nav-text">3.匿名函数–使用lambda定义函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-装饰器"><span class="nav-number">4.</span> <span class="nav-text">4.装饰器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-偏函数"><span class="nav-number">5.</span> <span class="nav-text">5.偏函数</span></a></li></ol></div>
             
 
           </div>
@@ -677,15 +615,6 @@ def int2(x, base=2):
   </span>
   <span class="author" itemprop="copyrightHolder">Sqing</span>
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count"></span>
   
 </div>
 
@@ -855,19 +784,6 @@ def int2(x, base=2):
   
 
 
-
-
-  
-  
-  
-  <link rel="stylesheet" href="/myblog/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/myblog/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/myblog/js/src/algolia-search.js?v=5.1.4"></script>
 
 
 
