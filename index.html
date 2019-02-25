@@ -259,6 +259,215 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://manllman.github.io/myblog/myblog/2019/02/25/python要点总结-函数式编程-1/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sqing">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myblog/images/frog.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青仔">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/myblog/2019/02/25/python要点总结-函数式编程-1/" itemprop="url">python要点总结[函数式编程]</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T16:37:18+08:00">
+                2019-02-25
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T17:34:31+08:00">
+                2019-02-25
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/myblog/categories/learn-python/" itemprop="url" rel="index">
+                    <span itemprop="name">learn-python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-init方法"><a href="#1-init方法" class="headerlink" title="1.init方法"></a>1.<strong>init</strong>方法</h2><ul>
+<li><p>在创建实例的时候，就不能传入空的参数了，必须传入与<strong>init</strong>方法匹配的参数，但self不需要传，Python解释器自己会把实例变量传进去：</p>
+</li>
+<li><p>和普通的函数相比，在类中定义的函数只有一点不同，就是第一个参数永远是实例变量self，并且，调用时，不用传递该参数。除此之外，类的方法和普通函数没有什么区别，所以，你仍然可以用默认参数、可变参数、关键字参数和命名关键字参数。</p>
+</li>
+</ul>
+<h2 id="2-访问限制"><a href="#2-访问限制" class="headerlink" title="2.访问限制"></a>2.访问限制</h2><pre><code>class Student(object):
+    def __init__(self, name, score):
+    # 使用__name实现对参数的访问限制，无法从外部访问
+        self.__name = name
+        self.__score = score
+    def print_score(self):
+        print(&apos;%s: %s&apos; % (self.__name, self.__score))
+    #比如
+bart = Student(&apos;sqing&apos;,99)
+bart.__name是无法访问的
+</code></pre><p>所以需要修改/使用参数时，使用定义set和get函数即可，而且可以对参数进行检查，避免传入无效数据，所以这种做法是有意义的</p>
+<blockquote>
+<p>有些时候，你会看到以一个下划线开头的实例变量名，比如_name，这样的实例变量外部是可以访问的，但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。</p>
+</blockquote>
+<blockquote>
+<p>双下划线开头的实例变量是不是一定不能从外部访问呢？其实也不是。不能直接访问<strong>name是因为Python解释器对外把</strong>name变量改成了_Student__name，所以，仍然可以通过_Student__name来访问__name变量</p>
+</blockquote>
+<h2 id="3-继承和多态"><a href="#3-继承和多态" class="headerlink" title="3.继承和多态"></a>3.继承和多态</h2><p>继承Class(Animal),继承Animal 的所有属性</p>
+<pre><code>class Animal(object):
+def run(self):
+    print(&apos;Animal is running...&apos;)
+
+class Dog(Animal):
+def run(self):
+    print(&apos;Dog is running...&apos;)
+def eat(self):
+    print(&apos;Eating meat...&apos;)
+</code></pre><p>   当子类和父类都存在相同的run()方法时，我们说，子类的run()覆盖了父类的run()，在代码运行的时候，总是会调用子类的run()。这样，我们就获得了继承的另一个好处：多态。</p>
+<p>著名的“开闭”原则：</p>
+<p>对扩展开放：允许新增Animal子类；</p>
+<p>对修改封闭：不需要修改依赖Animal类型的run_twice()等函数。</p>
+<pre><code>def run_twice(animal):
+    animal.run()
+    animal.run()
+</code></pre><p> 对于静态语言（例如Java）来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。</p>
+<p>对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了：</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li><p>继承可以把父类的所有功能都直接拿过来，这样就不必重零做起，子类只需要新增自己特有的方法，也可以把父类不适合的方法覆盖重写。</p>
+</li>
+<li><p>动态语言的鸭子类型特点决定了继承不像静态语言那样是必须的。</p>
+</li>
+</ul>
+<h2 id="4-获取对象信息"><a href="#4-获取对象信息" class="headerlink" title="4.获取对象信息"></a>4.获取对象信息</h2><p>如果要获得一个对象的所有属性和方法，可以使用dir()函数，它返回一个包含字符串的list，比如，获得一个str对象的所有属性和方法：</p>
+<pre><code>dir(&quot;ABC&quot;)
+[&apos;__add__&apos;, &apos;__class__&apos;,..., &apos;__subclasshook__&apos;, &apos;capitalize&apos;, &apos;casefold&apos;,..., &apos;zfill&apos;]
+</code></pre><p>类似__xxx__的属性和方法在Python中都是有特殊用途的，比如<strong>len</strong>方法返回长度。在Python中，如果你调用len()函数试图获取一个对象的长度，实际上，在len()函数内部，它自动去调用该对象的<strong>len</strong>()方法，所以，下面的代码是等价的：</p>
+<pre><code>len(&quot;ABC&quot;)
+&quot;ABC&quot;.__len__()
+</code></pre><p>仅仅把属性和方法列出来是不够的，配合getattr()、setattr(可以设置新的属性)以及hasattr()，我们可以直接操作一个对象的状态：</p>
+<h2 id="5-实例属性和类属性"><a href="#5-实例属性和类属性" class="headerlink" title="5.实例属性和类属性"></a>5.实例属性和类属性</h2><p>在编写程序的时候，千万不要对实例属性和类属性使用相同的名字，因为相同名称的实例属性将屏蔽掉类属性，但是当你删除实例属性后，再使用相同的名称，访问到的将是类属性。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://manllman.github.io/myblog/myblog/2019/02/25/python要点总结-函数式编程/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1245,7 +1454,7 @@
               
                 <a href="/myblog/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
